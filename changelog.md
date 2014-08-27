@@ -1,3 +1,7 @@
+2014-08-27
+
+Updating for use with cloudControl.
+
 ## v0.4
 
 2012-05-13
