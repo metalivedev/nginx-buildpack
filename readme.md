@@ -9,7 +9,7 @@ To create an Nginx binary for your PaaS, push this application and it
 will compile a new version of nginx for you. Download this version by
 visiting your application. This has been successfully built in 128MB.
 
-To use this binary in your appication, refer to this buildpack.
+To use this binary in your application, refer to this buildpack.
 
 ## Requirements
 
