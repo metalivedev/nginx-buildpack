@@ -67,7 +67,6 @@ curl -L $nginx_tarball_url | tar xzv
 	    --with-http_sub_module \
 	    --with-http_xslt_module --with-ipv6 \
 	    --with-sha1=/usr/include/openssl --with-md5=/usr/include/openssl \
-	    --add-module=/${temp_dir}/nginx-${NGINX_VERSION}/headers-more-nginx-module-${HEADERS_MORE_VERSION}
 	make install
 )
 
