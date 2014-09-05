@@ -18,6 +18,7 @@ HEADERS_MORE_VERSION=0.23
 
 
 nginx_tarball_url=http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
+temp_dir=$(mktemp -d /tmp/nginx.XXXXXXXXXX)
 
 echo "Serving files from /tmp on $PORT"
 cd /tmp
