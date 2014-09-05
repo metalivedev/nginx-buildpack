@@ -5,9 +5,19 @@ app server via UNIX domain sockets.
 
 ## Usage
 
-To create an Nginx binary for your PaaS, push this application and it
-will compile a new version of nginx for you. Download this version by
-visiting your application. This has been successfully built in 128MB.
+There are two ways to use this buildpack:
+
+1. Create a binary (using the Procfile)
+2. As a pre-built binary (if you see an `nginx` in the `bin/`)
+
+To create an Nginx binary for your PaaS, create a python application
+(because this will run a SimpleHTTPServer to allow you download the
+binary). Then push this application and it will compile a new version
+of nginx for you. Download this version by visiting your application's
+web address and navigate to nginx.*tempdir*/nginx-*version*/objs where
+you can download the `nginx` binary. This has been successfully built
+in 128MB. How can you tell when the build is ready? Follow your error,
+build, or deploy logs.
 
 To use this binary in your application, refer to this buildpack.
 
