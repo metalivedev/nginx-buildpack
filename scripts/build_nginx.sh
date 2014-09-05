@@ -54,18 +54,30 @@ curl -L $nginx_tarball_url | tar xzv
 # --add-module=/build/buildd/nginx-1.2.1/debian/modules/nginx-upstream-fair
 # --add-module=/build/buildd/nginx-1.2.1/debian/modules/nginx-dav-ext-module
 
+# Temporary removed while testing for successful build
+# 	    --with-debug \
+	    # --with-http_addition_module \
+	    # --with-http_dav_module \
+	    # --with-http_geoip_module \
+	    # --with-http_gzip_static_module \
+	    # --with-http_image_filter_module \
+	    # --with-http_realip_module \
+	    # --with-http_stub_status_module \
+	    # --with-http_sub_module \
+	    # --with-http_xslt_module \
+	    # --with-ipv6 \
+	    # --with-md5=/usr/include/openssl \
+	    # --with-sha1=/usr/include/openssl 
+
 (
 	cd nginx-${NGINX_VERSION}
+
 	chmod +x ./configure
+
 	./configure \
 	    --prefix=/tmp/nginx \
-	    --with-pcre-jit --with-debug --with-http_addition_module \
-	    --with-http_dav_module --with-http_geoip_module \
-	    --with-http_gzip_static_module --with-http_image_filter_module \
-	    --with-http_realip_module --with-http_stub_status_module \
-	    --with-http_sub_module \
-	    --with-http_xslt_module --with-ipv6 \
-	    --with-sha1=/usr/include/openssl --with-md5=/usr/include/openssl
+	    --with-pcre-jit 
+
 	make install
 )
 
