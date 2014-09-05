@@ -59,6 +59,7 @@ curl -L $nginx_tarball_url | tar xzv
 
 (
 	cd nginx-${NGINX_VERSION}
+	chmod +x ./configure
 	./configure \
 	    --prefix=/tmp/nginx \
 	    --with-pcre-jit --with-debug --with-http_addition_module \
