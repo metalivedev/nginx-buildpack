@@ -65,10 +65,12 @@ curl -L $nginx_tarball_url | tar xzv
 # --with-pcre-jit 
 # --with-sha1=/usr/include/openssl
 
-# Temporary removed while testing for successful build
+# Removed for successful build
 #
-	    # --with-http_geoip_module \
+# --with-http_geoip_module \
 # ./configure: error: the GeoIP module requires the GeoIP library.
+# --with-http_image_filter_module 
+# ./configure: error: the HTTP image filter module requires the GD library.
 
 (
 	cd nginx-${NGINX_VERSION}
@@ -88,8 +90,7 @@ curl -L $nginx_tarball_url | tar xzv
 	    --with-http_xslt_module \
 	    --with-http_dav_module \
 	    --with-md5=/usr/include/openssl \
-	    --with-sha1=/usr/include/openssl \
-	    --with-http_image_filter_module 
+	    --with-sha1=/usr/include/openssl
 
 	make install
 
