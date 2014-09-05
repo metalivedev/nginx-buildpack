@@ -71,6 +71,9 @@ curl -L $nginx_tarball_url | tar xzv
 # ./configure: error: the GeoIP module requires the GeoIP library.
 # --with-http_image_filter_module 
 # ./configure: error: the HTTP image filter module requires the GD library.
+#	    --with-md5=/usr/include/openssl \
+#	    --with-sha1=/usr/include/openssl
+# libmd5.a and libsha.a are not on the pinky system under /usr/lib/
 
 (
 	cd nginx-${NGINX_VERSION}
@@ -88,9 +91,7 @@ curl -L $nginx_tarball_url | tar xzv
 	    --with-http_stub_status_module \
 	    --with-http_sub_module \
 	    --with-http_xslt_module \
-	    --with-http_dav_module \
-	    --with-md5=/usr/include/openssl \
-	    --with-sha1=/usr/include/openssl
+	    --with-http_dav_module
 
 	make install
 
