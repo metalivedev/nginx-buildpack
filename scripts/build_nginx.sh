@@ -13,9 +13,6 @@
 # Nearest from http://nginx.org/en/download.html is 1.2.9
 # Latest                                         is 1.7.4
 NGINX_VERSION=1.2.9
-PCRE_VERSION=8.21
-HEADERS_MORE_VERSION=0.23
-
 
 nginx_tarball_url=http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
 temp_dir=$(mktemp -d /tmp/nginx.XXXXXXXXXX)
@@ -68,7 +65,7 @@ curl -L $nginx_tarball_url | tar xzv
 	    --with-http_realip_module --with-http_stub_status_module \
 	    --with-http_sub_module \
 	    --with-http_xslt_module --with-ipv6 \
-	    --with-sha1=/usr/include/openssl --with-md5=/usr/include/openssl \
+	    --with-sha1=/usr/include/openssl --with-md5=/usr/include/openssl
 	make install
 )
 
