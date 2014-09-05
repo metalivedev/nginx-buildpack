@@ -32,7 +32,10 @@ curl -L $nginx_tarball_url | tar xzv
 # nginx version: nginx/1.2.1 
 # TLS SNI support enabled 
 # configure arguments: 
-# --prefix=/etc/nginx
+# --add-module=/build/buildd/nginx-1.2.1/debian/modules/nginx-auth-pam
+# --add-module=/build/buildd/nginx-1.2.1/debian/modules/nginx-dav-ext-module
+# --add-module=/build/buildd/nginx-1.2.1/debian/modules/nginx-echo
+# --add-module=/build/buildd/nginx-1.2.1/debian/modules/nginx-upstream-fair
 # --conf-path=/etc/nginx/nginx.conf
 # --error-log-path=/var/log/nginx/error.log
 # --http-client-body-temp-path=/var/lib/nginx/body
@@ -41,18 +44,26 @@ curl -L $nginx_tarball_url | tar xzv
 # --http-proxy-temp-path=/var/lib/nginx/proxy
 # --http-scgi-temp-path=/var/lib/nginx/scgi
 # --http-uwsgi-temp-path=/var/lib/nginx/uwsgi
-# --lock-path=/var/lock/nginx.lock --pid-path=/var/run/nginx.pid
-# --with-pcre-jit --with-debug --with-http_addition_module
-# --with-http_dav_module --with-http_geoip_module
-# --with-http_gzip_static_module --with-http_image_filter_module
-# --with-http_realip_module --with-http_stub_status_module
-# --with-http_ssl_module --with-http_sub_module
-# --with-http_xslt_module --with-ipv6 --with-sha1=/usr/include/openssl
-# --with-md5=/usr/include/openssl --with-mail --with-mail_ssl_module
-# --add-module=/build/buildd/nginx-1.2.1/debian/modules/nginx-auth-pam
-# --add-module=/build/buildd/nginx-1.2.1/debian/modules/nginx-echo
-# --add-module=/build/buildd/nginx-1.2.1/debian/modules/nginx-upstream-fair
-# --add-module=/build/buildd/nginx-1.2.1/debian/modules/nginx-dav-ext-module
+# --lock-path=/var/lock/nginx.lock 
+# --pid-path=/var/run/nginx.pid
+# --prefix=/etc/nginx
+# --with-debug 
+# --with-http_addition_module
+# --with-http_dav_module 
+# --with-http_geoip_module
+# --with-http_gzip_static_module 
+# --with-http_image_filter_module
+# --with-http_realip_module 
+# --with-http_ssl_module 
+# --with-http_stub_status_module
+# --with-http_sub_module
+# --with-http_xslt_module 
+# --with-ipv6 
+# --with-mail 
+# --with-mail_ssl_module
+# --with-md5=/usr/include/openssl 
+# --with-pcre-jit 
+# --with-sha1=/usr/include/openssl
 
 # Temporary removed while testing for successful build
 #
@@ -62,7 +73,6 @@ curl -L $nginx_tarball_url | tar xzv
 	    # --with-http_stub_status_module \
 	    # --with-http_sub_module \
 	    # --with-http_xslt_module \
-	    # --with-ipv6 \
 	    # --with-md5=/usr/include/openssl \
 	    # --with-sha1=/usr/include/openssl 
 
@@ -77,7 +87,8 @@ curl -L $nginx_tarball_url | tar xzv
  	    --with-debug \
 	    --with-http_addition_module \
 	    --with-http_gzip_static_module \
-	    --with-http_realip_module 
+	    --with-http_realip_module \
+	    --with-ipv6
 
 	make install
 )
