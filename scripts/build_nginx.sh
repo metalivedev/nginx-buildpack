@@ -55,7 +55,7 @@ curl -L $nginx_tarball_url | tar xzv
 # --add-module=/build/buildd/nginx-1.2.1/debian/modules/nginx-dav-ext-module
 
 # Temporary removed while testing for successful build
-# 	    --with-debug \
+#
 	    # --with-http_addition_module \
 	    # --with-http_dav_module \
 	    # --with-http_geoip_module \
@@ -76,7 +76,8 @@ curl -L $nginx_tarball_url | tar xzv
 
 	./configure \
 	    --prefix=/tmp/nginx \
-	    --with-pcre-jit 
+	    --with-pcre-jit \
+ 	    --with-debug
 
 	make install
 )
