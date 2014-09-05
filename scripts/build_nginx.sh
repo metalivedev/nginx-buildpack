@@ -91,6 +91,10 @@ curl -L $nginx_tarball_url | tar xzv
 	    --with-sha1=/usr/include/openssl 
 
 	make install
+
+	# verify build
+	echo "Nginx configuration:"
+	./objs/nginx -V
 )
 
 while true
