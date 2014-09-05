@@ -67,8 +67,6 @@ curl -L $nginx_tarball_url | tar xzv
 
 # Temporary removed while testing for successful build
 #
-	    # --with-http_dav_module \
-	    # --with-http_geoip_module \
 	    # --with-http_image_filter_module \
 	    # --with-md5=/usr/include/openssl \
 	    # --with-sha1=/usr/include/openssl 
@@ -89,6 +87,8 @@ curl -L $nginx_tarball_url | tar xzv
 	    --with-http_stub_status_module \
 	    --with-http_sub_module \
 	    --with-http_xslt_module 
+	    --with-http_dav_module \
+	    --with-http_geoip_module
 
 	make install
 )
