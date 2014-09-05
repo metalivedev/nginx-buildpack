@@ -95,8 +95,10 @@ curl -L $nginx_tarball_url | tar xzv
 
 	make install
 
-	# verify build. Std err and out to file.
-	./objs/nginx -V &> finalconfig.txt
+	# verify build. Will show in logs.
+	echo "--- VERIFY BUILD:"
+	./objs/nginx -V 
+	echo "--- ------ ------"
 )
 
 while true
