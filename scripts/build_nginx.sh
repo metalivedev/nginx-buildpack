@@ -59,7 +59,6 @@ curl -L $nginx_tarball_url | tar xzv
 	    # --with-http_dav_module \
 	    # --with-http_geoip_module \
 	    # --with-http_image_filter_module \
-	    # --with-http_realip_module \
 	    # --with-http_stub_status_module \
 	    # --with-http_sub_module \
 	    # --with-http_xslt_module \
@@ -77,7 +76,8 @@ curl -L $nginx_tarball_url | tar xzv
 	    --with-pcre-jit \
  	    --with-debug \
 	    --with-http_addition_module \
-	    --with-http_gzip_static_module
+	    --with-http_gzip_static_module \
+	    --with-http_realip_module 
 
 	make install
 )
