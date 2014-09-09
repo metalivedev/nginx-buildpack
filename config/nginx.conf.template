@@ -27,7 +27,7 @@ http {
 #   }
 
     server {
-        listen <%= ENV["PORT"] %>;
+        listen :LISTENPORT:;
         server_name _;
 
         # root /home/dotcloud/current/;
