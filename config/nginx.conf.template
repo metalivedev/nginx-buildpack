@@ -41,11 +41,11 @@ http {
 #            uwsgi_param UWSGI_SCRIPT wsgi;
 #            include uwsgi_params;
 #            # include /home/dotcloud/current/*uwsgi.conf; 
-        }
-        error_page 404 @404;
-        error_page 500 @500;
-        error_page 502 @502;
-        error_page 503 @503;
-        error_page 504 @504;
+#        }
+#        error_page 404 @404;
+#        error_page 500 @500;
+#        error_page 502 @502;
+#        error_page 503 @503;
+#        error_page 504 @504;
     }
 }
