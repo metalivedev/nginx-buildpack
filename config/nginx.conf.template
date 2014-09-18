@@ -35,13 +35,13 @@ http {
         # root /home/dotcloud/current/;
         # include /home/dotcloud/current/*nginx.conf; 
 
-#        location / {
-#            uwsgi_pass unix:///tmp/nginx.socket;
-#            uwsgi_param SCRIPT_NAME '';
-#            uwsgi_param UWSGI_SCRIPT wsgi;
-#            include uwsgi_params;
-#            # include /home/dotcloud/current/*uwsgi.conf; 
-#        }
+        location / {
+            uwsgi_pass unix:///tmp/nginx.socket;
+            uwsgi_param SCRIPT_NAME '';
+            uwsgi_param UWSGI_SCRIPT wsgi;
+            include uwsgi_params;
+            # include /home/dotcloud/current/*uwsgi.conf; 
+        }
 #        error_page 404 @404;
 #        error_page 500 @500;
 #        error_page 502 @502;
